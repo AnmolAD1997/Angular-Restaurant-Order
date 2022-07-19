@@ -1,0 +1,38 @@
+<h1> Citizens Cafe Order Here.!</h1>
+
+
+<div *ngIf ="orderedItem.length==0" >
+
+  Please Select Some food From the Menu Tab!! Thank You.
+
+</div>
+
+<div *ngIf ="orderedItem.length" >
+<table class="table table-sm table-dark">
+    <thead>
+      <tr >
+        <th scope="col">#</th>
+        <th scope="col">Item</th>
+        <th scope="col">Price</th>
+        
+       
+      </tr>
+    </thead>
+    <tbody>
+        
+        
+      <tr *ngFor="let order of orderedItem;" data-toggle="tooltip" data-placement="top" title=}>
+        <th scope="row">{{order.number}}</th>
+        <td>{{order.food}}</td>
+        <td>
+            {{order.price}}$</td>
+      </tr>
+    
+    </tbody>
+  </table>
+
+  <button type="button" class="btn btn-success" (click) ="orderNow();" routerLink="/order" >Order Now</button>
+  <button type="button" class="btn btn-danger"(click) ="clearOrder();" routerLink="/menu">Clear Order</button>
+</div>
+
+

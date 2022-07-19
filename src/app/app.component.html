@@ -1,0 +1,52 @@
+<body>
+   <div id="header1"> 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/home"  routerLinkActive="active">Citizen Cafe</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" routerLink="/menu" routerLinkActive="active" >Menu</a>
+          <a class="nav-link" routerLink="/order" routerLinkActive="active" >Order</a>
+          <a class="nav-link" routerLink="/checkout" routerLinkActive="active" [hidden]="disable">CheckOut</a>
+        
+          
+          
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+
+
+  <router-outlet>
+
+  </router-outlet>
+  
+
+  <footer class="bg-dark text-center text-white">
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color:rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;">
+      ©2022 Copyright:
+      <a class="text-white" href="/home" (click)="alert()">CitizensCafe.com/Anmol</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</body>
+ 
+
+
+

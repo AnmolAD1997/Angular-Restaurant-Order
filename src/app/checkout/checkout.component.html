@@ -1,0 +1,56 @@
+
+
+  <div class="page-header" *ngIf ="orderedItem.length==0">
+    <h1>Order Something before you can Checkout!!</h1>
+  </div>
+  <div class="page-header" *ngIf ="orderedItem.length">
+    <h1>Proceed to Checkout Here!</h1>
+  </div>
+  
+
+
+
+<div *ngIf ="orderedItem.length">
+<table class="table table-sm table-dark">
+    <thead>
+      <tr >
+        <th scope="col">#</th>
+        <th scope="col">Item</th>
+        <th scope="col">Price</th>
+        
+       
+      </tr>
+    </thead>
+    <tbody>
+        
+        
+      <tr *ngFor="let order of orderedItem;" data-toggle="tooltip" data-placement="top" title=}>
+        <th scope="row">{{order.number}}</th>
+        <td>{{order.food}}</td>
+        <td>
+            {{order.price}}$</td>
+      
+      </tr>
+
+    
+   
+    </tbody>
+    <tfoot> 
+      <tr>
+        <td> 
+        </td>
+        <td> 
+        </td>
+        <td> Total Amount: {{totalBill}}$
+        </td>
+      </tr>
+      </tfoot>
+    
+    
+  </table>
+
+  <button type="button" class="btn btn-success" (click) ="payNow();" routerLink="/home" >PayNow</button>
+ 
+</div>
+
+
